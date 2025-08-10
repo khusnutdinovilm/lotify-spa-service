@@ -1,0 +1,76 @@
+@use "styles/variables/colors" as clr;
+
+$default-heading-color: clr.$slate-50;
+$default-body-color: clr.$slate-400;
+
+@mixin heading-h1($weight: 400, $color: $default-heading-color) {
+  font-size: 60px;
+  font-weight: $weight;
+  line-height: 66px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin heading-h2($weight: 400, $color: $default-heading-color) {
+  font-size: 48px;
+  font-weight: $weight;
+  line-height: 57.6px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin heading-h3($weight: 400, $color: $default-heading-color) {
+  font-size: 36px;
+  font-weight: $weight;
+  line-height: 46.8px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin heading-h4($weight: 400, $color: $default-heading-color) {
+  font-size: 30px;
+  font-weight: $weight;
+  line-height: 42px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin heading-h5($weight: 400, $color: $default-heading-color) {
+  font-size: 24px;
+  font-weight: $weight;
+  line-height: 33.6px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin heading-h6($weight: 400, $color: $default-heading-color) {
+  font-size: 20px;
+  font-weight: $weight;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin body-sm($weight: 400, $color: $default-body-color) {
+  font-size: 14px;
+  font-weight: $weight;
+  line-height: 19.6px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin body-md($weight: 400, $color: $default-body-color) {
+  font-size: 16px;
+  font-weight: $weight;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: $color;
+}
+
+@mixin body-lg($weight: 400, $color: $default-body-color) {
+  font-size: 18px;
+  font-weight: $weight;
+  line-height: 27px;
+  letter-spacing: 0%;
+  color: $color;
+}

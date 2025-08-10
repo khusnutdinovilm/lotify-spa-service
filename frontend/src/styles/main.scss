@@ -1,5 +1,5 @@
 @use "reset";
-
+@use "styles/variables/colors" as *;
 @use "styles/mixins/index" as *;
 
 @include font-face("FiraCode", 300);
@@ -9,5 +9,46 @@
 @include font-face("FiraCode", 700);
 
 body {
+  padding: $space-5;
+
+  background-color: $slate-950;
+
   font-family: "FiraCode", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 576px) {
+    padding: $space-7;
+  }
+}
+
+.container {
+  padding: 0 $space-6;
+
+  width: 100%;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

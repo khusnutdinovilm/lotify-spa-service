@@ -8,6 +8,7 @@ import vue from "@vitejs/plugin-vue";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vueDevTools()],
+
   resolve: {
     alias: {
       "assets/": fileURLToPath(new URL("./src/assets/", import.meta.url)),
@@ -19,6 +20,17 @@ export default defineConfig({
       "api/": fileURLToPath(new URL("./src/api/", import.meta.url)),
       "store/": fileURLToPath(new URL("./src/store/", import.meta.url)),
       "modules/": fileURLToPath(new URL("./src/modules/", import.meta.url)),
+    },
+  },
+
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "styles/variables/index" as *;
+          @use "styles/mixins/index" as *;
+        `,
+      },
     },
   },
 });
