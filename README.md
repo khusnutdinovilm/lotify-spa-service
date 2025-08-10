@@ -22,3 +22,7 @@
 ```sh
 git clone https://github.com/khusnutdinovilm/lotify-spa-service.git
 ```
+
+### Настройка и запуск серверной части приложения
+
+Выполните инструкции из файла [backend/README.md](backend/README.md).
