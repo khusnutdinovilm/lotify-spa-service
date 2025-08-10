@@ -1,0 +1,13 @@
+@use "reset";
+
+@use "styles/mixins/index" as *;
+
+@include font-face("FiraCode", 300);
+@include font-face("FiraCode", 400);
+@include font-face("FiraCode", 500);
+@include font-face("FiraCode", 600);
+@include font-face("FiraCode", 700);
+
+body {
+  font-family: "FiraCode", sans-serif;
+}
