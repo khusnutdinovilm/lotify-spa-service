@@ -15,8 +15,9 @@ body {
 
   font-family: "FiraCode", sans-serif;
 
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
+
+  min-height: 100dvh;
 
   @media (min-width: 576px) {
     padding: $space-7;
