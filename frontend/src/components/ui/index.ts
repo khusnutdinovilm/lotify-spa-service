@@ -1,3 +1,17 @@
-import BaseIcon from "./base-icon/base-icon.vue";
+import BaseButton from "./base-button";
+import BaseCheckbox from "./base-checkbox";
+import BaseChip from "./base-chip";
+import BaseDialog from "./base-dialog";
+import BaseIcon from "./base-icon";
+import BaseInput from "./base-input";
+import ImageUploader from "./image-uploader";
 
-export const uiComponents = [BaseIcon];
+export const uiComponents = [
+  BaseIcon,
+  BaseButton,
+  BaseInput,
+  BaseChip,
+  ImageUploader,
+  BaseDialog,
+  BaseCheckbox,
+];
