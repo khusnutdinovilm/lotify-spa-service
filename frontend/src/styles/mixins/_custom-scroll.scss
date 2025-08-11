@@ -1,0 +1,23 @@
+@mixin custom-scroll(
+  $scrollbar-color,
+  $scrollbar-width: 6px,
+  $scrollbar-height: 6px,
+  $border-radius: 8px
+) {
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-color transparent;
+
+  &::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-height;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color;
+    border-radius: $border-radius;
+  }
+}

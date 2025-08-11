@@ -1,0 +1,30 @@
+@mixin flex($gap: 0, $direction: row, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin flex-col($gap: 0, $wrap: nowrap) {
+  @include flex($direction: column, $gap: $gap, $wrap: nowrap);
+}
+
+@mixin flex-row($gap: 0, $wrap: nowrap) {
+  @include flex($direction: row, $gap: 0, $wrap: nowrap);
+}
+
+@mixin flex-center($gap: 0, $direction: column) {
+  @include flex($gap, $direction);
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-y($gap: 0, $direction: row) {
+  @include flex($gap, $direction);
+  align-items: center;
+}
+
+@mixin flex-center-x($gap: 0, $direction: column) {
+  @include flex($gap, $direction);
+  justify-content: center;
+}
