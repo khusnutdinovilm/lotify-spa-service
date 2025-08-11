@@ -1,11 +1,7 @@
-import "vue";
-
-import BaseIcon from "./base-icon";
+import BaseIcon from "./base-icon.vue";
 
 declare module "vue" {
   export interface GlobalComponents {
     BaseIcon: typeof BaseIcon;
   }
 }
-
-export {};
