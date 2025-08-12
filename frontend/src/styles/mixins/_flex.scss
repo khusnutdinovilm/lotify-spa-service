@@ -10,7 +10,7 @@
 }
 
 @mixin flex-row($gap: 0, $wrap: nowrap) {
-  @include flex($direction: row, $gap: 0, $wrap: nowrap);
+  @include flex($direction: row, $gap: $gap, $wrap: nowrap);
 }
 
 @mixin flex-center($gap: 0, $direction: column) {
