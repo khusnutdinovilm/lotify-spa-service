@@ -1,9 +1,10 @@
 <template>
   <div
     class="image-uploader"
-    :class="{ 'image-uploader--uploaded': image }"
+    :class="{ 'image-uploader--uploaded': image || previewImage }"
     @dragover.prevent
     @drop.prevent="onDrop"
+    @click.stop="triggerFileInputDialog"
   >
     <input
       ref="fileInputRef"
@@ -24,7 +25,7 @@
           <base-icon name="bin" />
         </base-button>
 
-        <img :src="previewImage" />
+        <base-image :src="previewImage" />
       </div>
     </template>
   </div>
@@ -53,10 +54,7 @@ const resetImage = () => {
   fileInputRef.value = null;
 };
 
-const triggerFileInputDialog = () => {
-  if (previewImage.value) return;
-  fileInputRef.value?.click();
-};
+const triggerFileInputDialog = () => fileInputRef.value?.click();
 
 const onDrop = (event: DragEvent) => {
   const file = event.dataTransfer?.files[0] || null;
@@ -141,7 +139,6 @@ const handleFile = (file: File) => {
     padding: 0;
     border-style: solid;
     border-width: 1px;
-    cursor: default;
   }
 }
 </style>
