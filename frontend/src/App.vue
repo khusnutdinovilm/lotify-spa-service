@@ -1,6 +1,17 @@
-<template>hello</template>
+<template>
+  <app-header />
 
-<script setup lang="ts"></script>
+  <lot-list-page />
+
+  <app-footer />
+</template>
+
+<script setup lang="ts">
+import AppFooter from "common/app-footer";
+import AppHeader from "common/app-header";
+
+import LotListPage from "modules/lot/components/lot-list-page";
+</script>
 
 <style lang="scss">
 #app {
