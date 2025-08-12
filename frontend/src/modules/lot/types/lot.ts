@@ -7,3 +7,11 @@ export interface ILot {
   price: number;
   status: LotStatus;
 }
+
+export interface ICreateLotDto extends Omit<ILot, "id" | "photo"> {
+  photo: File;
+}
+
+export interface IUpdateLotDto extends Partial<Omit<ILot, "id" | "photo">> {
+  photo?: File;
+}
