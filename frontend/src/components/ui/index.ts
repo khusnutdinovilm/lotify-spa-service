@@ -5,6 +5,7 @@ import BaseDialog from "./base-dialog";
 import BaseIcon from "./base-icon";
 import BaseImage from "./base-image";
 import BaseInput from "./base-input";
+import BaseLoader from "./base-loader";
 import BaseSkeleton from "./base-skeleton";
 import ImageUploader from "./image-uploader";
 
@@ -18,4 +19,5 @@ export const uiComponents = [
   BaseCheckbox,
   BaseSkeleton,
   BaseImage,
+  BaseLoader,
 ];
