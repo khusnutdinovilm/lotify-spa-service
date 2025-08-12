@@ -6,7 +6,7 @@
     :disabled="disabled"
     @click="onClick"
   >
-    <span v-if="loading" class="base-button__loader"></span>
+    <base-loader v-if="loading" width="19.6" height="19.6" />
     <div v-else class="base-button__content">
       <div v-if="prependIcon" class="base-button__icon base-button__icon--prepend">
         <base-icon :name="prependIcon" />
@@ -62,15 +62,6 @@ const onClick = (event: MouseEvent) => {
   transition: all 0.3s ease-out;
 
   background-color: var(--bg-color);
-
-  &__loader {
-    width: 19.6px;
-    height: 19.6px;
-    border: 1px solid var(--font-color);
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    animation: rotation 1.25s linear infinite;
-  }
 
   &__content {
     @include flex-center-y($gap: $space-3);
@@ -140,12 +131,6 @@ const onClick = (event: MouseEvent) => {
   &--error,
   &--warning {
     --font-color: #{$slate-950};
-  }
-
-  @keyframes rotation {
-    to {
-      transform: rotate(360deg);
-    }
   }
 }
 </style>
