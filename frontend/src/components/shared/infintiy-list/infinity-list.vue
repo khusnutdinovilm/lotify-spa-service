@@ -1,9 +1,9 @@
 <template>
   <div class="infinity-list">
-    <div class="infinity-list__list" :class="listClass">
-      <div v-for="item in items" :key="item.id">
+    <div class="infinity-list__list">
+      <template v-for="item in items" :key="item.id">
         <slot name="list-item" :item="item"></slot>
-      </div>
+      </template>
     </div>
 
     <div
@@ -23,7 +23,6 @@ defineOptions({
 
 const { currentPage = 1, ...props } = defineProps<{
   items: T[];
-  listClass?: string;
   isNextPageLoading?: boolean;
   currentPage?: number;
   lastPage?: number;
@@ -56,7 +55,7 @@ function onIntersecting() {
     gap: $space-5;
 
     @media (min-width: 1200px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(250px, 1fr));
     }
   }
 
