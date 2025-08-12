@@ -3,10 +3,12 @@ import { createApp } from "vue";
 
 import { uiComponents } from "ui/index";
 
+import sharedComponents from "shared/index";
+
 import App from "./App.vue";
 import vIntersect from "./directives/v-intersect";
 
-const globalComponents = [...uiComponents];
+const globalComponents = [...uiComponents, ...sharedComponents];
 
 const app = createApp(App);
 
