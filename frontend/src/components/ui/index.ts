@@ -4,6 +4,7 @@ import BaseChip from "./base-chip";
 import BaseDialog from "./base-dialog";
 import BaseIcon from "./base-icon";
 import BaseInput from "./base-input";
+import BaseSkeleton from "./base-skeleton";
 import ImageUploader from "./image-uploader";
 
 export const uiComponents = [
@@ -14,4 +15,5 @@ export const uiComponents = [
   ImageUploader,
   BaseDialog,
   BaseCheckbox,
+  BaseSkeleton,
 ];
