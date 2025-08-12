@@ -12,6 +12,7 @@ export interface IBaseButtonProps {
   disabled?: boolean;
   btnType?: BtnTypes;
   htmlType?: HtmlTypes;
+  form?: string;
 }
 
 export interface IBaseButtonEmits {
