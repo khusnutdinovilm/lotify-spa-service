@@ -40,7 +40,7 @@ const pageContentClasses = computed(() => ({
   @include flex-col($gap: $space-6);
 
   &__title {
-    @include heading-h4($slate-400);
+    @include heading-h4($color: $slate-400, $weight: 600);
   }
 
   &__content {
