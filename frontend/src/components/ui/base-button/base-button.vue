@@ -2,6 +2,7 @@
   <button
     class="base-button"
     :class="`base-button--${btnType}`"
+    :form="form"
     :type="htmlType"
     :disabled="disabled"
     @click="onClick"
