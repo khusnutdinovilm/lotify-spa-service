@@ -23,6 +23,33 @@
 git clone https://github.com/khusnutdinovilm/lotify-spa-service.git
 ```
 
-### Настройка и запуск серверной части приложения
+### Запуск с Docker
+
+Для запуска с помощью Docker, выполните в терминале следующую команду:
+
+```bash
+docker compose up --build
+```
+
+Затем, выполните следующие команды для первоначальной настройки Laravel в контейнере:
+
+```sh
+docker exec -it backend bash
+
+# Внутри контейнера
+cp .env.example .env
+
+php artisan key:generate
+php artisan migrate:fresh --seed
+php artisan storage:link
+```
+
+### Запуск без Docker
+
+#### Настройка и запуск серверной части приложения
 
 Выполните инструкции из файла [backend/README.md](backend/README.md).
+
+#### Настройка и запуск клиентской части приложения
+
+Выполните инструкции из файла [frontend/README.md](frontend/README.md).
