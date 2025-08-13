@@ -6,6 +6,7 @@
   <app-footer />
 
   <dialog-create-lot />
+  <dialog-update-lot />
 </template>
 
 <script setup lang="ts">
@@ -13,6 +14,7 @@ import AppFooter from "common/app-footer";
 import AppHeader from "common/app-header";
 
 import DialogCreateLot from "modules/lot/components/dialog-create-lot";
+import DialogUpdateLot from "modules/lot/components/dialog-update-lot";
 import LotListPage from "modules/lot/components/lot-list-page";
 </script>
 
