@@ -41,7 +41,7 @@ class LotController extends Controller
 
         $lot = Lot::create($validated);
 
-        return response()->json($lot, 201);
+        return (new LotResource($lot))->response();
     }
 
     /**
@@ -78,7 +78,7 @@ class LotController extends Controller
 
         $lot->update($validated);
 
-        return response()->json($lot);
+        return (new LotResource($lot))->response();
     }
 
     /**
