@@ -138,7 +138,7 @@ onBeforeUnmount(() => {
 
   &__wrapper-content {
     overflow-y: scroll;
-    padding-right: $space-3;
+    padding: 0 $space-3;
 
     @include custom-scroll($slate-600);
   }

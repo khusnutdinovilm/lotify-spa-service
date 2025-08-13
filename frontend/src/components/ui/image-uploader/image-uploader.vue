@@ -120,6 +120,11 @@ const handleFile = (file: File) => {
       top: $space-5;
       right: $space-5;
     }
+
+    & .base-image {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   & svg {
@@ -127,18 +132,12 @@ const handleFile = (file: File) => {
     height: 20px;
   }
 
-  & img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    aspect-ratio: 1 /1;
-  }
-
   &--uploaded {
     padding: 0;
     border-style: solid;
     border-width: 1px;
+    align-items: unset;
+    justify-content: unset;
   }
 }
 </style>

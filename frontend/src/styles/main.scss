@@ -50,3 +50,11 @@ body {
     margin: 0 auto;
   }
 }
+
+.form {
+  @include flex-col($gap: $space-6);
+
+  &__group {
+    @include flex-col($gap: $space-5);
+  }
+}

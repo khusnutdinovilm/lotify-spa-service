@@ -4,7 +4,7 @@
       {{ label }}
     </label>
 
-    <input :id="id" v-model.trim="inputValue" :type="type" class="base-input__field" />
+    <input :id="id" v-model.trim="inputValue" :type="type" step="0.01" class="base-input__field" />
 
     <span v-if="errorText" class="base-input__error-text">
       {{ errorText }}
