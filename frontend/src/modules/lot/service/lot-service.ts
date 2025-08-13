@@ -4,7 +4,11 @@ import api from "api/api";
 import BaseHttpService from "api/index";
 
 import type { ILot } from "modules/lot/types/lot";
-import type { LotPaginatedListResult } from "modules/lot/types/service";
+import type {
+  LotCreateResult,
+  LotPaginatedListResult,
+  LotUpdateResult,
+} from "modules/lot/types/service";
 
 class LotService extends BaseHttpService {
   constructor(api: AxiosInstance) {
@@ -16,13 +20,13 @@ class LotService extends BaseHttpService {
     return this.$api.get(path);
   }
 
-  async create(payload: FormData) {
+  async create(payload: FormData): LotCreateResult {
     return this.$api.post(this.$url, payload);
   }
 
-  async update(id: ILot["id"], payload: FormData) {
+  async update(id: ILot["id"], payload: FormData): LotUpdateResult {
     const path = `${this.$url}/${id}`;
-    return this.$api.put(path, payload);
+    return this.$api.post(path, payload);
   }
 
   async delete(id: ILot["id"]) {

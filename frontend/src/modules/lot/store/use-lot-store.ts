@@ -27,19 +27,39 @@ const useLotStore = defineStore("lot-store", () => {
 
     Object.entries(payload).forEach(([key, value]) => formData.append(key, value));
 
-    await lotService.create(formData);
+    const { data: resData } = await lotService.create(formData);
+    const { data: newLot } = resData;
+
+    if (currentPage.value === lastPage.value) {
+      lots.value.push(newLot);
+    }
   };
 
   const updateLot = async (lotId: ILot["id"], payload: IUpdateLotDto) => {
     const formData = new FormData();
 
-    Object.entries(payload).forEach(([key, value]) => formData.append(key, value));
+    Object.entries(payload).forEach(([key, value]) => {
+      if (value) {
+        formData.append(key, value);
+      }
+    });
 
-    await lotService.update(lotId, formData);
+    const { data: resData } = await lotService.update(lotId, formData);
+    const { data: updatedLot } = resData;
+
+    const idx = lots.value.findIndex(lot => lot.id === lotId);
+    if (idx !== -1) {
+      lots.value[idx] = { ...updatedLot };
+    }
   };
 
   const deleteLot = async (lotId: ILot["id"]) => {
     await lotService.delete(lotId);
+
+    const idx = lots.value.findIndex(lot => lot.id === lotId);
+    if (idx !== -1) {
+      lots.value.splice(idx, 1);
+    }
   };
 
   return {
