@@ -10,5 +10,5 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/lots', [LotController::class, 'index']);
 Route::post('/lots', [LotController::class, 'store']);
-Route::put('/lots/{id}', [LotController::class, 'update']);
+Route::match(['put', 'post'], '/lots/{id}', [LotController::class, 'update']);
 Route::delete('/lots/{id}', [LotController::class, 'destroy']);
