@@ -25,3 +25,9 @@ export interface IApiGetPagindatedListResponse<T> extends IApiGetListResponse<T>
 }
 
 export type ApiGetPaginatedListResult<T> = ApiResul<IApiGetPagindatedListResponse<T>>;
+
+export interface IApiItemResponse<T> {
+  data: T;
+}
+
+export type ApiItemResult<T> = ApiResul<IApiItemResponse<T>>;

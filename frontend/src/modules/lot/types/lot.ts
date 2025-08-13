@@ -13,5 +13,5 @@ export interface ICreateLotDto extends Omit<ILot, "id" | "photo"> {
 }
 
 export interface IUpdateLotDto extends Partial<Omit<ILot, "id" | "photo">> {
-  photo?: File;
+  photo?: File | null;
 }
