@@ -15,11 +15,14 @@
 <script setup lang="ts">
 import AppBrand from "common/app-brand";
 
+import useEventBusStore from "store/use-event-bus-store";
+
 defineOptions({
   name: "app-header",
 });
 
-const openCreateLotDialog = () => {};
+const eventBus = useEventBusStore();
+const openCreateLotDialog = () => eventBus.emit("dialog/create-lot", null);
 </script>
 
 <style lang="scss">

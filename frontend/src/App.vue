@@ -4,12 +4,15 @@
   <lot-list-page />
 
   <app-footer />
+
+  <dialog-create-lot />
 </template>
 
 <script setup lang="ts">
 import AppFooter from "common/app-footer";
 import AppHeader from "common/app-header";
 
+import DialogCreateLot from "modules/lot/components/dialog-create-lot";
 import LotListPage from "modules/lot/components/lot-list-page";
 </script>
 
